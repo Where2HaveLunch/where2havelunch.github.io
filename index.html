@@ -1,51 +1,242 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Chen</title>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        body{
+            font-family: Arial, sans-serif;
+            background:#0f172a;
+            color:white;
+            line-height:1.6;
+        }
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+        a{
+            color:#38bdf8;
+            text-decoration:none;
+        }
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:auto;
+        }
 
-jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        header{
+            padding:80px 0;
+            text-align:center;
+        }
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+        header h1{
+            font-size:56px;
+            margin-bottom:10px;
+        }
+
+        header p{
+            font-size:20px;
+            color:#cbd5e1;
+        }
+
+        nav{
+            margin-top:25px;
+        }
+
+        nav a{
+            margin:0 15px;
+            font-size:18px;
+        }
+
+        section{
+            padding:60px 0;
+            border-top:1px solid #1e293b;
+        }
+
+        h2{
+            font-size:32px;
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .card{
+            background:#111827;
+            padding:25px;
+            border-radius:16px;
+            margin-bottom:20px;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            background:#1e293b;
+        }
+
+        .project-title{
+            font-size:22px;
+            margin-bottom:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:40px 0;
+            color:#94a3b8;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:40px;
+            }
+
+            nav a{
+                display:block;
+                margin:10px 0;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="container">
+
+        <h1>Samuel Chen</h1>
+
+        <p>
+            Researcher in Large Language Models, Quantization, 
+            Multimodal AI and Federated Learning
+        </p>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <section id="about" class="container">
+
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                I am currently focusing on large language model quantization,
+                multimodal model acceleration, privacy preserving machine learning,
+                and federated learning.
+            </p>
+
+            <br>
+
+            <p>
+                My recent research includes:
+            </p>
+
+            <ul style="margin-top:15px; margin-left:20px;">
+                <li>Qwen3-VL Quantization</li>
+                <li>GPTQ Calibration</li>
+                <li>Block Floating Point Training</li>
+                <li>Multimodal Large Models</li>
+                <li>Efficient Inference</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="projects" class="container">
+
+        <h2>Projects</h2>
+
+        <div class="card">
+            <div class="project-title">
+                Qwen3-VL Quantization
+            </div>
+
+            <p>
+                Research on multimodal large model quantization and calibration.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="project-title">
+                BFP Training Framework
+            </div>
+
+            <p>
+                Dynamic bitwidth training with UCB and greedy strategies.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="project-title">
+                Federated Collaborative Learning
+            </div>
+
+            <p>
+                Privacy preserving distributed learning for compact and large models.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="publications" class="container">
+
+        <h2>Publications</h2>
+
+        <div class="card">
+
+            <p>
+                [1] Your Paper Title Here
+            </p>
+
+            <br>
+
+            <p>
+                [2] Another Paper Title
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="container">
+
+        <h2>Contact</h2>
+
+        <div class="card">
+
+            <p>Email: your_email@example.com</p>
+
+            <br>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/where2havelunch">
+                    github.com/where2havelunch
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 Samuel Chen
+        </p>
+
+    </footer>
+
+</body>
+</html>

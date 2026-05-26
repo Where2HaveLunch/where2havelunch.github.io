@@ -27,8 +27,6 @@
             line-height:1.75;
         }
 
-        /* 链接 */
-
         a{
             color:#2b7bb9;
             text-decoration:none;
@@ -38,15 +36,11 @@
             text-decoration:underline;
         }
 
-        /* 页面整体 */
-
         .container{
             width:90%;
             max-width:1200px;
             margin:0 auto;
         }
-
-        /* 顶部 */
 
         header{
             padding-top:50px;
@@ -58,25 +52,19 @@
         .hero{
             display:flex;
             gap:70px;
-        
             align-items:flex-start;
-        
-            position:relative;
         }
 
-        /* 左侧栏 */
+        /* 左侧固定栏 */
 
         .sidebar{
             width:260px;
             flex-shrink:0;
-        
+
             position:sticky;
-        
-            top:30px;
-        
-            height:100vh;
-        
-            overflow:auto;
+            top:40px;
+
+            align-self:flex-start;
         }
 
         /* 头像 */
@@ -96,7 +84,7 @@
             border:1px solid #e5e7eb;
         }
 
-        /* 左侧姓名 */
+        /* 姓名 */
 
         .sidebar h1{
             font-size:20px;
@@ -129,28 +117,11 @@
             min-width:0;
         }
 
-        /* 顶部介绍 */
-
-        .intro h2{
-            font-size:48px;
-            font-weight:700;
-            color:#333;
-            margin-bottom:18px;
-        }
-
-        .intro p{
-            font-size:18px;
-            color:#555;
-            margin-bottom:28px;
-        }
-
-        /* section */
-
         section{
-            margin-top:50px;
+            margin-bottom:60px;
         }
 
-        /* section标题 */
+        /* 标题 */
 
         section h3{
             font-size:24px;
@@ -163,7 +134,7 @@
             border-bottom:1px solid #e5e7eb;
         }
 
-        /* 内容 */
+        /* 正文 */
 
         section p,
         section li{
@@ -179,19 +150,36 @@
             margin-bottom:16px;
         }
 
-        /* News */
-
         .news-item{
             margin-bottom:12px;
         }
-
-        /* footer */
 
         footer{
             text-align:center;
             padding:40px 0;
             color:#888;
             font-size:14px;
+        }
+
+        /* 手机适配 */
+
+        @media (max-width: 900px){
+
+            .hero{
+                flex-direction:column;
+            }
+
+            .sidebar{
+                position:relative;
+                top:0;
+                width:100%;
+            }
+
+            .hero-image img{
+                width:180px;
+                height:240px;
+            }
+
         }
 
     </style>
@@ -238,13 +226,14 @@
 
                 <!-- About Me -->
 
-                <section id="About Me">
+                <section id="about">
 
                     <h3>About Me</h3>
 
                     <p>
                         Hello, I am Shaoyuan Chen.
-                        I will join City University of Hong Kong for my PhD studies in September 2026, supervised by
+                        I will join City University of Hong Kong for my PhD studies in September 2026,
+                        supervised by
                         <a href="https://zhaoxyai.github.io/">
                             Prof Xiangyu Zhao
                         </a>
@@ -256,16 +245,16 @@
                         and will earn my master's degree from Sun Yat-sen University.
                     </p>
 
-                </div>
+                </section>
 
                 <!-- News -->
 
                 <section id="news">
 
-                    <h3>🔥News</h3>
+                    <h3>🔥 News</h3>
 
                     <div class="news-item">
-                        
+                        Coming soon...
                     </div>
 
                 </section>
@@ -285,32 +274,32 @@
                         <li>Federated Learning</li>
 
                     </ul>
-                    
+
+                </section>
+
                 <!-- Work Experiences -->
 
-                <section id="Work Experiences">
+                <section id="work">
 
                     <h3>Work Experiences</h3>
 
                     <div class="news-item">
-                        
+                        Coming soon...
                     </div>
 
-                 </section>
-                    
+                </section>
 
                 <!-- Publications -->
 
-                <section id="Publications">
+                <section id="publications">
 
                     <h3>Publications</h3>
 
                     <div class="news-item">
-                        
+                        Coming soon...
                     </div>
 
                 </section>
-                    
 
             </div>
 

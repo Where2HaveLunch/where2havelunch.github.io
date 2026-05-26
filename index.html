@@ -1,311 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
 
-<head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+html{
+    scroll-behavior:smooth;
+}
 
-    <title>Shaoyuan Chen</title>
+body{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+    line-height:1.75;
+}
 
-    <style>
-    
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-    
-        html{
-            scroll-behavior:smooth;
-        }
-    
-        body{
-            font-family: Arial, sans-serif;
-            background:#f8fafc;
-            color:#0f172a;
-            line-height:1.8;
-        }
-    
-        a{
-            color:#2563eb;
-            text-decoration:none;
-            transition:0.3s;
-        }
-    
-        a:hover{
-            color:#1d4ed8;
-        }
-    
-        /* 页面整体更宽 */
-    
-        .container{
-            width:96%;
-            max-width:1500px;
-            margin:auto;
-        }
-    
-        header{
-            padding:60px 0 80px 0;
-        }
-    
-        /* 顶部布局 */
-    
-        .hero{
-            display:flex;
-    
-            align-items:flex-start;
-    
-            justify-content:flex-start;
-    
-            gap:100px;
-    
-            width:100%;
-        }
-    
-        /* 左侧照片 */
-    
-        .hero-image{
-            flex:0 0 320px;
-    
-            margin-left:0;
-        }
-    
-        .hero-image img{
-    
-            width:260px;
-    
-            height:360px;
-    
-            object-fit:cover;
-    
-            /* 椭圆形 */
-    
-            border-radius:50% / 35%;
-    
-            /* 无边框 */
-    
-            border:none;
-    
-            /* 无阴影 */
-    
-            box-shadow:none;
-    
-            display:block;
-        }
-    
-        /* 右侧文字 */
-    
-        .hero-text{
-            flex:1;
-            min-width:300px;
-        }
-    
-        .hero-text h1{
-            font-size:60px;
-            margin-bottom:20px;
-            color:#0f172a;
-            font-weight:700;
-        }
-    
-        .hero-text p{
-            font-size:22px;
-            color:#475569;
-        }
-    
-        nav{
-            margin-top:30px;
-        }
-    
-        nav a{
-            margin-right:25px;
-            font-size:18px;
-            font-weight:500;
-        }
-    
-        /* 内容区域 */
-    
-        section{
-            padding:70px 0;
-            border-top:1px solid #e2e8f0;
-        }
-    
-        /* 标题黑色 */
-    
-        h2{
-            font-size:34px;
-            margin-bottom:25px;
-            color:#0f172a;
-            font-weight:700;
-        }
-    
-        /* 卡片 */
-    
-        .card{
-            background:white;
-    
-            padding:30px;
-    
-            border-radius:18px;
-    
-            transition:0.3s;
-    
-            box-shadow:0 4px 20px rgba(0,0,0,0.05);
-        }
-    
-        .card:hover{
-    
-            transform:translateY(-4px);
-    
-            box-shadow:0 8px 30px rgba(0,0,0,0.08);
-        }
-    
-        /* 文字 */
-    
-        p{
-            color:#334155;
-            font-size:17px;
-        }
-    
-        ul{
-            margin-left:20px;
-        }
-    
-        li{
-            margin-bottom:12px;
-            color:#334155;
-            font-size:17px;
-        }
-    
-        footer{
-            text-align:center;
-            padding:50px 0;
-            color:#64748b;
-            font-size:15px;
-        }
-    
-        /* 手机端适配 */
-    
-        @media(max-width:768px){
-    
-            .hero{
-    
-                flex-direction:column;
-    
-                align-items:center;
-    
-                text-align:center;
-    
-                gap:40px;
-            }
-    
-            .hero-text h1{
-                font-size:42px;
-            }
-    
-            .hero-text p{
-                font-size:18px;
-            }
-    
-            nav a{
-                display:block;
-                margin:12px 0;
-            }
-    
-            .hero-image img{
-    
-                width:220px;
-    
-                height:300px;
-            }
-    
-            section{
-                padding:60px 0;
-            }
-    
-        }
-    
-    </style>
-    
-</head>
+/* 链接 */
 
-<body>
+a{
+    color:#2b7bb9;
+    text-decoration:none;
+}
 
-    <header class="container">
+a:hover{
+    text-decoration:underline;
+}
 
-        <div class="hero">
+/* 页面整体 */
 
-            <div class="hero-text">
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+}
 
-                <h1>Shaoyuan Chen</h1>
+/* 顶部区域 */
 
-                <nav>
-                    <a href="#about">About Me</a>
-                    <a href="#news">News</a>
-                    <a href="#research">Research Interests</a>
-                </nav>
+header{
+    padding-top:50px;
+    padding-bottom:30px;
+}
 
-            </div>
+/* 整体布局 */
 
-            <div class="hero-image">
+.hero{
+    display:flex;
+    align-items:flex-start;
+    gap:70px;
+}
 
-                <img src="Shaoyuan Chen.jpg" alt="Shaoyuan Chen">
+/* 左侧栏 */
 
-            </div>
+.sidebar{
+    width:260px;
+    flex-shrink:0;
+}
 
-        </div>
+/* 头像 */
 
-    </header>
+.hero-image{
+    width:220px;
+    margin-bottom:25px;
+}
 
-    <section id="about" class="container">
+.hero-image img{
+    width:220px;
+    height:300px;
+    object-fit:cover;
 
-        <h2>About Me</h2>
+    border-radius:50% / 35%;
 
-        <div class="card">
+    border:1px solid #e5e7eb;
+}
 
-            <p>
-                Hi, I am Shaoyuan Chen. 
-                I will join City University of Hong Kong for my PhD studies in September, 2026, supervised by
-                <a href="https://zhaoxyai.github.io/">Prof Xiangyu Zhao</a> and <a href="https://www.cityu.edu.hk/stfprofile/xinyueli.htm">Prof Xinyue Li</a>.
-                Before this, I earned my bachelor's degree from Jilin University, and will earn my master's degree from Sun Yat-sen University.
-            </p>
+/* 姓名 */
 
-        </div>
+.sidebar h1{
+    font-size:20px;
+    font-weight:700;
+    color:#333;
+    margin-bottom:15px;
+}
 
-    </section>
+/* 联系方式 */
 
-    <section id="news" class="container">
+.contact{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
 
-        <h2>News</h2>
+.contact a{
+    color:#444;
+    font-size:16px;
+}
 
-        <div class="card">
+.contact a:hover{
+    color:#2b7bb9;
+}
 
-            <ul>
+/* 右侧正文 */
 
-            </ul>
+.main-content{
+    flex:1;
+    min-width:0;
+}
 
-        </div>
+/* 顶部介绍 */
 
-    </section>
+.intro h2{
+    font-size:48px;
+    font-weight:700;
+    color:#333;
+    margin-bottom:18px;
+}
 
-    <section id="research" class="container">
+.intro p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:28px;
+}
 
-        <h2>Research Interests</h2>
+/* section */
 
-        <div class="card">
+section{
+    margin-top:50px;
+}
 
-            <ul>
+/* 标题 */
 
-                <li>Multimodal LLMs</li>
+section h3{
+    font-size:24px;
+    font-weight:700;
+    color:#333;
 
-                <li>Efficient AI</li>
+    padding-bottom:10px;
+    margin-bottom:20px;
 
-                <li>Federated Learning</li>
+    border-bottom:1px solid #e5e7eb;
+}
 
-            </ul>
+/* 正文 */
 
-        </div>
+section p,
+section li{
+    font-size:18px;
+    color:#444;
+}
 
-</body>
+ul{
+    padding-left:28px;
+}
 
-</html>
+li{
+    margin-bottom:16px;
+}
+
+/* 不使用卡片 */
+
+.card{
+    background:none;
+    padding:0;
+    border-radius:0;
+    box-shadow:none;
+}
+
+/* News */
+
+.news-item{
+    margin-bottom:12px;
+}
+
+/* 手机端 */
+
+@media(max-width:768px){
+
+    .hero{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .sidebar{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-image{
+        margin:0 auto 25px auto;
+    }
+
+    .main-content{
+        width:100%;
+    }
+
+    .intro h2{
+        font-size:36px;
+    }
+
+    .intro p,
+    section p,
+    section li{
+        font-size:16px;
+    }
+}
+
+</style>

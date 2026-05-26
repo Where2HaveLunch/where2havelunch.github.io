@@ -1,66 +1,341 @@
-<div class="hero">
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- 左侧 -->
-    <div class="sidebar">
+<head>
 
-        <div class="hero-image">
-            <img src="Shaoyuan Chen.jpg" alt="Shaoyuan Chen">
-        </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <h1>Shaoyuan Chen</h1>
+    <title>Shaoyuan Chen</title>
 
-        <div class="contact">
-            <a href="mailto:xxx@gmail.com">✉ Email</a>
-            <a href="#">Google Scholar</a>
-            <a href="#">Github</a>
-        </div>
+    <style>
 
-    </div>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-    <!-- 右侧 -->
-    <div class="main-content">
+        html{
+            scroll-behavior:smooth;
+        }
 
-        <div class="intro">
+        body{
+            font-family:"Helvetica Neue", Arial, sans-serif;
+            background:#ffffff;
+            color:#333;
+            line-height:1.75;
+        }
 
-            <h2>Shaoyuan Chen</h2>
+        /* 链接 */
 
-            <p>
-                I will join City University of Hong Kong for my PhD studies in September 2026, supervised by
-                <a href="https://zhaoxyai.github.io/">Prof Xiangyu Zhao</a> and
-                <a href="https://www.cityu.edu.hk/stfprofile/xinyueli.htm">Prof Xinyue Li</a>.
-                Before this, I earned my bachelor's degree from Jilin University and will earn my master's degree from Sun Yat-sen University.
-            </p>
+        a{
+            color:#2b7bb9;
+            text-decoration:none;
+        }
 
-            <p>
-                My current research interests include multimodal large language models,
-                efficient AI, federated learning, and model quantization.
-            </p>
+        a:hover{
+            text-decoration:underline;
+        }
 
-        </div>
+        /* 页面整体 */
 
-        <section id="news">
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:0 auto;
+        }
 
-            <h3>News</h3>
+        /* 顶部 */
 
-            <div class="news-item">
-                [2026.09] Join CityU as a PhD student.
+        header{
+            padding-top:50px;
+            padding-bottom:40px;
+        }
+
+        /* 左右布局 */
+
+        .hero{
+            display:flex;
+            align-items:flex-start;
+            gap:70px;
+        }
+
+        /* 左侧栏 */
+
+        .sidebar{
+            width:260px;
+            flex-shrink:0;
+        }
+
+        /* 头像 */
+
+        .hero-image{
+            width:220px;
+            margin-bottom:25px;
+        }
+
+        .hero-image img{
+            width:220px;
+            height:300px;
+            object-fit:cover;
+
+            border-radius:50% / 35%;
+
+            border:1px solid #e5e7eb;
+        }
+
+        /* 左侧姓名 */
+
+        .sidebar h1{
+            font-size:20px;
+            font-weight:700;
+            color:#333;
+            margin-bottom:15px;
+        }
+
+        /* 联系方式 */
+
+        .contact{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
+
+        .contact a{
+            color:#444;
+            font-size:16px;
+        }
+
+        .contact a:hover{
+            color:#2b7bb9;
+        }
+
+        /* 右侧内容 */
+
+        .main-content{
+            flex:1;
+            min-width:0;
+        }
+
+        /* 顶部介绍 */
+
+        .intro h2{
+            font-size:48px;
+            font-weight:700;
+            color:#333;
+            margin-bottom:18px;
+        }
+
+        .intro p{
+            font-size:18px;
+            color:#555;
+            margin-bottom:28px;
+        }
+
+        /* section */
+
+        section{
+            margin-top:50px;
+        }
+
+        /* section标题 */
+
+        section h3{
+            font-size:24px;
+            font-weight:700;
+            color:#333;
+
+            padding-bottom:10px;
+            margin-bottom:20px;
+
+            border-bottom:1px solid #e5e7eb;
+        }
+
+        /* 内容 */
+
+        section p,
+        section li{
+            font-size:18px;
+            color:#444;
+        }
+
+        ul{
+            padding-left:28px;
+        }
+
+        li{
+            margin-bottom:16px;
+        }
+
+        /* News */
+
+        .news-item{
+            margin-bottom:12px;
+        }
+
+        /* footer */
+
+        footer{
+            text-align:center;
+            padding:40px 0;
+            color:#888;
+            font-size:14px;
+        }
+
+        /* 手机端 */
+
+        @media(max-width:768px){
+
+            .hero{
+                flex-direction:column;
+                gap:40px;
+            }
+
+            .sidebar{
+                width:100%;
+                text-align:center;
+            }
+
+            .hero-image{
+                margin:0 auto 25px auto;
+            }
+
+            .main-content{
+                width:100%;
+            }
+
+            .intro h2{
+                font-size:36px;
+            }
+
+            .intro p,
+            section p,
+            section li{
+                font-size:16px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="container">
+
+        <div class="hero">
+
+            <!-- 左侧 -->
+
+            <div class="sidebar">
+
+                <div class="hero-image">
+                    <img src="Shaoyuan Chen.jpg" alt="Shaoyuan Chen">
+                </div>
+
+                <h1>Shaoyuan Chen</h1>
+
+                <div class="contact">
+
+                    <a href="mailto:your_email@example.com">
+                        ✉ Email
+                    </a>
+
+                    <a href="#">
+                        Google Scholar
+                    </a>
+
+                    <a href="#">
+                        Github
+                    </a>
+
+                </div>
+
             </div>
 
-        </section>
+            <!-- 右侧 -->
 
-        <section id="research">
+            <div class="main-content">
 
-            <h3>Research Interests</h3>
+                <div class="intro">
 
-            <ul>
-                <li>Multimodal Large Language Models</li>
-                <li>Efficient AI</li>
-                <li>Federated Learning</li>
-                <li>Model Quantization</li>
-            </ul>
+                    <h2>Shaoyuan Chen</h2>
 
-        </section>
+                    <p>
+                        I will join City University of Hong Kong for my PhD studies in September 2026, supervised by
+                        <a href="https://zhaoxyai.github.io/">
+                            Prof Xiangyu Zhao
+                        </a>
+                        and
+                        <a href="https://www.cityu.edu.hk/stfprofile/xinyueli.htm">
+                            Prof Xinyue Li
+                        </a>.
+                        Before this, I earned my bachelor's degree from Jilin University
+                        and will earn my master's degree from Sun Yat-sen University.
+                    </p>
 
-    </div>
+                    <p>
+                        My current research interests include multimodal large language models,
+                        efficient AI, federated learning, and model quantization.
+                    </p>
 
-</div>
+                </div>
+
+                <!-- News -->
+
+                <section id="news">
+
+                    <h3>News</h3>
+
+                    <div class="news-item">
+                        [2026.09] Join CityU as a PhD student.
+                    </div>
+
+                </section>
+
+                <!-- Research -->
+
+                <section id="research">
+
+                    <h3>Research Interests</h3>
+
+                    <ul>
+
+                        <li>Multimodal Large Language Models</li>
+
+                        <li>Efficient AI</li>
+
+                        <li>Federated Learning</li>
+
+                        <li>Model Quantization</li>
+
+                    </ul>
+
+                </section>
+
+                <!-- Publications -->
+
+                <section id="publications">
+
+                    <h3>Publications</h3>
+
+                    <ul>
+
+                        <li>
+                            Your publication will appear here.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </header>
+
+</body>
+
+</html>

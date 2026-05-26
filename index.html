@@ -57,8 +57,11 @@
 
         .hero{
             display:flex;
-            align-items:flex-start;
             gap:70px;
+        
+            align-items:flex-start;
+        
+            position:relative;
         }
 
         /* 左侧栏 */
@@ -68,11 +71,12 @@
             flex-shrink:0;
         
             position:sticky;
-            top:40px;
         
-            align-self:flex-start;
+            top:30px;
         
-            height:fit-content;
+            height:100vh;
+        
+            overflow:auto;
         }
 
         /* 头像 */
@@ -190,39 +194,6 @@
             font-size:14px;
         }
 
-        /* 手机端 */
-
-        @media(max-width:768px){
-
-            .hero{
-                flex-direction:column;
-                gap:40px;
-            }
-
-            .sidebar{
-                width:100%;
-                text-align:center;
-            }
-
-            .hero-image{
-                margin:0 auto 25px auto;
-            }
-
-            .main-content{
-                width:100%;
-            }
-
-            .intro h2{
-                font-size:36px;
-            }
-
-            .intro p,
-            section p,
-            section li{
-                font-size:16px;
-            }
-        }
-
     </style>
 
 </head>
@@ -265,7 +236,9 @@
 
             <div class="main-content">
 
-                <div class="intro">
+                <!-- About Me -->
+
+                <section id="About Me">
 
                     <h3>About Me</h3>
 

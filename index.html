@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Chen</title>
+
+    <title>Shaoyuan Chen</title>
 
     <style>
+
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
         }
 
+        html{
+            scroll-behavior:smooth;
+        }
+
         body{
             font-family: Arial, sans-serif;
             background:#0f172a;
             color:white;
-            line-height:1.6;
+            line-height:1.8;
         }
 
         a{
@@ -26,102 +34,145 @@
 
         .container{
             width:90%;
-            max-width:1000px;
+            max-width:1100px;
             margin:auto;
         }
 
         header{
             padding:80px 0;
-            text-align:center;
         }
 
-        header h1{
-            font-size:56px;
-            margin-bottom:10px;
+        .hero{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:60px;
+            flex-wrap:wrap;
         }
 
-        header p{
-            font-size:20px;
+        .hero-text{
+            flex:1;
+            min-width:300px;
+        }
+
+        .hero-text h1{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero-text p{
+            font-size:22px;
             color:#cbd5e1;
         }
 
         nav{
-            margin-top:25px;
+            margin-top:30px;
         }
 
         nav a{
-            margin:0 15px;
+            margin-right:25px;
             font-size:18px;
         }
 
+        .hero-image{
+            flex:0 0 280px;
+            text-align:center;
+        }
+
+        .hero-image img{
+            width:260px;
+            height:260px;
+            object-fit:cover;
+            border-radius:50%;
+            border:5px solid #38bdf8;
+            box-shadow:0 0 30px rgba(56,189,248,0.3);
+        }
+
         section{
-            padding:60px 0;
+            padding:70px 0;
             border-top:1px solid #1e293b;
         }
 
         h2{
-            font-size:32px;
-            margin-bottom:20px;
+            font-size:34px;
+            margin-bottom:25px;
             color:#38bdf8;
         }
 
         .card{
             background:#111827;
-            padding:25px;
-            border-radius:16px;
-            margin-bottom:20px;
+            padding:30px;
+            border-radius:18px;
             transition:0.3s;
         }
 
         .card:hover{
-            transform:translateY(-5px);
             background:#1e293b;
+            transform:translateY(-4px);
         }
 
-        .project-title{
-            font-size:22px;
-            margin-bottom:10px;
+        ul{
+            margin-left:20px;
+        }
+
+        li{
+            margin-bottom:12px;
         }
 
         footer{
             text-align:center;
-            padding:40px 0;
+            padding:50px 0;
             color:#94a3b8;
         }
 
         @media(max-width:768px){
 
-            header h1{
-                font-size:40px;
+            .hero{
+                flex-direction:column-reverse;
+                text-align:center;
+            }
+
+            .hero-text h1{
+                font-size:42px;
             }
 
             nav a{
                 display:block;
-                margin:10px 0;
+                margin:12px 0;
             }
 
         }
 
     </style>
+
 </head>
 
 <body>
 
     <header class="container">
 
-        <h1>Samuel Chen</h1>
+        <div class="hero">
 
-        <p>
-            Researcher in Large Language Models, Quantization, 
-            Multimodal AI and Federated Learning
-        </p>
+            <div class="hero-text">
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-        </nav>
+                <h1>Shaoyuan Chen</h1>
+
+                <nav>
+                    <a href="#about">About Me</a>
+                    <a href="#news">News</a>
+                    <a href="#research">Research Interests</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="photo.jpg" alt="Shaoyuan Chen">
+
+            </div>
+
+        </div>
 
     </header>
 
@@ -130,80 +181,48 @@
         <h2>About Me</h2>
 
         <div class="card">
-            <p>
-                I am currently focusing on large language model quantization,
-                multimodal model acceleration, privacy preserving machine learning,
-                and federated learning.
-            </p>
-
-            <br>
 
             <p>
-                My recent research includes:
+                Hi, I am Shaoyuan Chen. 
+                I will join City University of Hong Kong for my PhD studies in September, 2026, supervised by Prof Xiangyu Zhao and Prof Xinyue Li.
+                Before this, I earned my bachalor's degree from Jilin University, supervised by Prof Ciyun Lin,
+                and will earn my master's degree from Sun Yat-sen University, supervised by Prof Linlin You.
             </p>
 
-            <ul style="margin-top:15px; margin-left:20px;">
-                <li>Qwen3-VL Quantization</li>
-                <li>GPTQ Calibration</li>
-                <li>Block Floating Point Training</li>
-                <li>Multimodal Large Models</li>
-                <li>Efficient Inference</li>
+        </div>
+
+    </section>
+
+    <section id="news" class="container">
+
+        <h2>News</h2>
+
+        <div class="card">
+
+            <ul>
+
+                
             </ul>
+
         </div>
 
     </section>
 
-    <section id="projects" class="container">
+    <section id="research" class="container">
 
-        <h2>Projects</h2>
-
-        <div class="card">
-            <div class="project-title">
-                Qwen3-VL Quantization
-            </div>
-
-            <p>
-                Research on multimodal large model quantization and calibration.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="project-title">
-                BFP Training Framework
-            </div>
-
-            <p>
-                Dynamic bitwidth training with UCB and greedy strategies.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="project-title">
-                Federated Collaborative Learning
-            </div>
-
-            <p>
-                Privacy preserving distributed learning for compact and large models.
-            </p>
-        </div>
-
-    </section>
-
-    <section id="publications" class="container">
-
-        <h2>Publications</h2>
+        <h2>Research Interests</h2>
 
         <div class="card">
 
-            <p>
-                [1] Your Paper Title Here
-            </p>
+            <ul>
 
-            <br>
+                <li>Multimodal LLMs</li>
 
-            <p>
-                [2] Another Paper Title
-            </p>
+                <li>Efficient AI</li>
+
+                <li>Federated Learning</li>
+
+            </ul>
 
         </div>
 
@@ -215,28 +234,14 @@
 
         <div class="card">
 
-            <p>Email: your_email@example.com</p>
-
-            <br>
-
             <p>
-                GitHub:
-                <a href="https://github.com/where2havelunch">
-                    github.com/where2havelunch
-                </a>
+                E-Mail: chenshy299@mail2.sysu.edu.cn
             </p>
 
         </div>
 
-    </section>
-
-    <footer>
-
-        <p>
-            © 2026 Samuel Chen
-        </p>
-
-    </footer>
 
 </body>
+
 </html>
+```

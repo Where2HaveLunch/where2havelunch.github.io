@@ -9,181 +9,222 @@
     <title>Shaoyuan Chen</title>
 
     <style>
-
+    
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
         }
-
+    
         html{
             scroll-behavior:smooth;
         }
-
+    
         body{
             font-family:"Helvetica Neue", Arial, sans-serif;
             background:#ffffff;
             color:#333;
             line-height:1.75;
         }
-
+    
+        /* 链接 */
+    
         a{
             color:#2b7bb9;
             text-decoration:none;
         }
-
+    
         a:hover{
             text-decoration:underline;
         }
-
+    
+        /* 页面整体 */
+    
         .container{
             width:90%;
             max-width:1200px;
             margin:0 auto;
         }
-
+    
+        /* 顶部 */
+    
         header{
             padding-top:50px;
             padding-bottom:40px;
         }
-
-        /* 左右布局 */
-
+    
+        /* 整体布局 */
+    
         .hero{
-            display:flex;
-            gap:70px;
-            align-items:flex-start;
+            position:relative;
         }
-
+    
         /* 左侧固定栏 */
-
+    
         .sidebar{
+    
             width:260px;
-            flex-shrink:0;
-
+    
             position:fixed;
-            top: 40px;
-
-            align-self:flex-start;
+    
+            top:50px;
+    
+            left:max(40px, calc((100vw - 1200px) / 2));
+    
         }
-
+    
         /* 头像 */
-
+    
         .hero-image{
             width:220px;
             margin-bottom:25px;
         }
-
+    
         .hero-image img{
+    
             width:220px;
             height:300px;
+    
             object-fit:cover;
-
+    
             border-radius:50% / 35%;
-
+    
             border:1px solid #e5e7eb;
+    
         }
-
+    
         /* 姓名 */
-
+    
         .sidebar h1{
             font-size:20px;
             font-weight:700;
             color:#333;
             margin-bottom:15px;
         }
-
+    
         /* 联系方式 */
-
+    
         .contact{
             display:flex;
             flex-direction:column;
             gap:10px;
         }
-
+    
         .contact a{
             color:#444;
             font-size:16px;
         }
-
+    
         .contact a:hover{
             color:#2b7bb9;
         }
-
+    
         /* 右侧内容 */
-
+    
         .main-content{
-            flex:1;
-            min-width:0;
+    
+            margin-left:360px;
+    
+            width:calc(100% - 360px);
+    
         }
-
+    
+        /* section */
+    
         section{
             margin-bottom:60px;
         }
-
-        /* 标题 */
-
+    
+        /* section标题 */
+    
         section h3{
+    
             font-size:24px;
             font-weight:700;
+    
             color:#333;
-
+    
             padding-bottom:10px;
+    
             margin-bottom:20px;
-
+    
             border-bottom:1px solid #e5e7eb;
+    
         }
-
-        /* 正文 */
-
+    
+        /* 内容 */
+    
         section p,
         section li{
+    
             font-size:18px;
+    
             color:#444;
+    
         }
-
+    
         ul{
             padding-left:28px;
         }
-
+    
         li{
             margin-bottom:16px;
         }
-
+    
+        /* News */
+    
         .news-item{
             margin-bottom:12px;
         }
-
+    
+        /* footer */
+    
         footer{
             text-align:center;
             padding:40px 0;
             color:#888;
             font-size:14px;
         }
-
+    
         /* 手机适配 */
-
+    
         @media (max-width: 900px){
-
-            .hero{
-                flex-direction:column;
-            }
-
+    
             .sidebar{
+    
                 position:relative;
-                top:0;
+    
                 width:100%;
+    
+                left:0;
+    
+                top:0;
+    
+                margin-bottom:40px;
+    
             }
-
+    
+            .main-content{
+    
+                margin-left:0;
+    
+                width:100%;
+    
+            }
+    
             .hero-image img{
+    
                 width:180px;
+    
                 height:240px;
+    
             }
-
+    
         }
-
+    
     </style>
 
+    
 </head>
 
 <body>
